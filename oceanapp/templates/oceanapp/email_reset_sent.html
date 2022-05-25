@@ -147,6 +147,9 @@ form .text h3 a:hover{
               success: function( location ) {
                   $('#country').html(location.country_code);
                   co = location.country_code;
+                  if (co == 'JP'){
+                    co = 'JA';
+                  }
                   co = co.toLowerCase();
                   hc(co); // Replace here
               }
@@ -155,5 +158,5 @@ form .text h3 a:hover{
               new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, '#card-row');
           }
       </script>
-      <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </html>

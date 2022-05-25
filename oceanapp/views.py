@@ -202,6 +202,12 @@ def Register(request):
         pass1 = request.POST.get('pass1')
         phone = request.POST.get('phone')
 
+        try:
+            messages.error(request, 'Enter your first and last names')
+            return render(request, 'oceanapp/reg.html', {})
+        except:
+            pass
+
         check = User.objects.filter(username=username)
         check_email = User.objects.filter(email=email)
         if check:

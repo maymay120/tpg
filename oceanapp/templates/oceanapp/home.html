@@ -646,6 +646,9 @@ Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728
               success: function( location ) {
                   $('#country').html(location.country_code);
                   co = location.country_code;
+                  if (co == 'JP'){
+                    co = 'JA';
+                  }
                   co = co.toLowerCase();
                   hc(co); // Replace here
               }
@@ -654,5 +657,5 @@ Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728
               new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, '#card-row');
           }
       </script>
-      <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </html>

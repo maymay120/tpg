@@ -25,14 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(w3an%=5#2wbkhrolxuhpqu^ad6dh&4@ekcf381518qj-$fv-w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
-# CSRF_TRUSTED_ORIGINS = ['http://185.156.172.76','https://oceanfortunes.com','https://www.oceanfortunes.com']
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://185.156.172.76', 'https://oceanfortunes.com','http://www.oceanfortunes.com', 'http://localhost']
+CSRF_TRUSTED_ORIGINS = ['http://185.156.172.76','https://oceanfortunes.com','https://www.oceanfortunes.com']
 
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 
-# CORS_ORIGIN_WHITELIST = ('http://localhost','http://185.156.172.76','https://oceanfortunes.com','https://www.oceanfortunes.com')
+CORS_ORIGIN_WHITELIST = ('http://localhost','http://185.156.172.76','https://oceanfortunes.com','https://www.oceanfortunes.com')
 # STATIC_URL = 'root/ocean/oceanapp/static/'
 
 # STATIC_ROOT = os.path.join(BASE_DIR,  'staticfiles')
