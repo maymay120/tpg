@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<style>
+    .goog-te-banner-frame {
+        display: none !important;
+    }
+    .goog-te-gadget-simple{
+        display: none !important;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script></head>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ocean Fortunes | Dashboard</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/oceans12/image/upload/v1650496305/static1/dashboard/images/favicon_uo4bbd.jpg">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://res.cloudinary.com/oceans12/raw/upload/v1650496309/static1/dashboard/vendor/toastr/toastr.min_ceczhe.css">
+    <link rel="stylesheet" href="https://res.cloudinary.com/oceans12/raw/upload/v1650496291/static1/dashboard/css/style_hz1unc.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <nav class="navbar">
+
+                             <div class="header-search d-flex align-items-center">
+                                <a  href="{% url 'home' %}">
+                
+                                    <span><img src="https://res.cloudinary.com/oceans12/image/upload/v1650496316/static1/images/logo_odcge0.png" alt="" width="250" hieght="100"> </span></a>
+                                <form action="#">
+                                    <!-- <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                        </div>
+                                    </div> -->
+                                </form>
+                                
+                            </div>
+
+
+                            <div class="dashboard_log">
+                                <div class="d-fhlex align-items-center">
+                                    <div class="profile_log dropdown">
+                                        
+                                        <div class="user" >
+                                            <a href="{% url 'logout' %}">
+                                                <i class="mdi mdi-lock"></i> Logout
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="row">
+                <div class="col-xl-12">
+               
+            </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}" >
+                            <span><i class="mdi mdi-view-dashboard"></i></span>
+                            <span class="nav-text ">My Investments</span>
+                        </a>
+                    </li>
+                    <li><a href="{% url 'portfolio' %}">
+                            <span><i class="mdi mdi-chart-pie"></i></span>
+                            <span class="nav-text">Portfolio</span>
+                        </a>
+                    </li>
+                    <li><a href="{% url 'account' %}">
+                            <span><i class="mdi mdi-account"></i></span>
+                            <span class="nav-text">Account</span>
+                        </a>
+                    </li>
+                    <li><a href="{% url 'setting' %}">
+                            <span><i class="fa-solid fa-gear"></i></span>
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </li>
+                    <li><a href="{% url 'faq' %}">
+                        <span><i class="mdi mdi-message" ></i></span>
+                        <span class="nav-text">FAQ</span>
+                    </a>
+                </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+    
+                <div class="copy_right">
+                    ©
+                    <script>
+                        var CurrentYear = new Date().getFullYear()
+                        document.write(CurrentYear)
+                    </script> Ocean Fortunes
+                </div>
+                <a href="mailto:info@oceanfortunes.com"><small>info@oceanfortunes.com</small></a>
+            </div>
+        </div>
+
+        <div class="page_title">
+            <div class="container">
+                <div class="row">
+                    <div style="height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #f7f8fa; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #fafbfc;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1506&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="#" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px"></a></div></div>
+
+                    <div class="col-xl-12">
+                        <div class="page_title-content">
+                            <p>Welcome Back,<span>{{request.user.first_name}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block body %} {% endblock %}
+        
+
+    </div>
+
+
+
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496308/static1/dashboard/vendor/jquery/jquery.min_bftvwl.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496308/static1/dashboard/vendor/bootstrap/js/bootstrap.bundle.min_uov3jt.js"></script>
+
+
+    <!-- <script src="{% static 'dashboard/vendor/toastr/toastr.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/toastr/toastr-init.js' %}"></script> -->
+
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496307/static1/dashboard/vendor/circle-progress/circle-progress-init_pkwaye.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496308/static1/dashboard/vendor/circle-progress/circle-progress.min_s8qps4.js"></script>
+
+
+    <!--  flot-chart js -->
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496309/static1/dashboard/vendor/apexchart/apexcharts.min_xt01th.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496307/static1/dashboard/vendor/apexchart/apexchart-init_h8qgsv.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496307/static1/dashboard/vendor/apexchart/apexchart2-init_ok3xg5.js"></script>
+    <script src="https://www.cryptohopper.com/widgets/js/script"></script>
+
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496308/static1/dashboard/vendor/jquery/jquery.min_bftvwl.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496308/static1/dashboard/vendor/bootstrap/js/bootstrap.bundle.min_uov3jt.js"></script>
+
+
+    <!-- <script src="{% static 'dashboard/vendor/toastr/toastr.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/toastr/toastr-init.js' %}"></script> -->
+
+     <!--<script src="{% static 'dashboard/vendor/circle-progress/circle-progress.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/circle-progress/circle-progress-init.js' %}"></script>
+
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="vendor/jquery/jquery.min.js"></script> -->
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496307/static1/dashboard/js/scripts_lmkniv.js"></script>
+
+
+
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496308/static1/dashboard/vendor/magnific-popup/magnific-popup_ktwpmy.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496308/static1/dashboard/vendor/magnific-popup/magnific-popup-init_w1pzuz.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496310/static1/dashboard/vendor/validator/jquery.validate_zzcc9m.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496310/static1/dashboard/vendor/validator/validator-init_qkfky1.js"></script>
+
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496309/static1/dashboard/vendor/jquery-ui/jquery-ui.min_jxvrys.js"></script>
+    <script src="https://res.cloudinary.com/oceans12/raw/upload/v1650496306/static1/dashboard/js/plugins/jquery-ui-init_w4bxhv.js"></script>
+</body>
+<script>
+
+    function hc(dc){
+                lang = Cookies.get('language');
+                if(lang != dc){
+                    window.location.hash = 'googtrans(en|' + dc + ')';
+                    location.reload();
+                    Cookies.set('language', dc);
+                }
+            }
+            $.ajax({
+                type: "GET",
+                url: "https://geolocation-db.com/jsonp/",
+                jsonpCallback: "callback",
+                dataType: "jsonp",
+                success: function( location ) {
+                    $('#country').html(location.country_code);
+                    co = location.country_code;
+                    co = co.toLowerCase();
+                    hc(co); // Replace here
+                }
+            });
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, '#card-row');
+            }
+        </script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+</html>

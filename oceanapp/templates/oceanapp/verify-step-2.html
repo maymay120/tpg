@@ -1,0 +1,55 @@
+﻿{% extends "oceanapp/dbase.html" %} {% block title %}Dashboard{% endblock %} {% block body %}
+
+        <div class="content-body">
+            <div class="verification section-padding">
+                <div class="container h-100">
+                    <div class="row justify-content-center h-100 align-items-center">
+                        <div class="col-xl-5 col-md-6">
+                            <div class="auth-form card">
+                                <!-- <div class="card-header">
+                                <h4 class="card-title">Link a Debit card</h4>
+                            </div> -->
+                                <div class="card-body">
+                                    <form action="#" method="POST" enctype="multipart/form-data" class="identity-upload">
+                                        {% csrf_token %}
+
+                                        <div class="identity-content">
+                                            <h4>Upload your ID card</h4>
+                                            <span>Driving License, Passport, or other Government issued ID card</span>
+                                        </br>
+                                        <div><p></p></div>
+                                            <!-- <p>Uploading your ID helps us ensure the safety and security of your founds
+                                            </p> -->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="me-sm-2">Upload Front</label>
+                                            <span class="float-right">Maximum file size is 2mb</span>
+                                            <div class="file-upload-wrapper" data-text="front.jpg">
+                                                <input type="file" class="file-upload-field" value="" name="upload1">
+                                            </div>
+                                        </div>
+                                        <div><p></p></div>
+                                        <div class="mb-3">
+                                            <label class="me-sm-2">Upload Back</label>
+                                            <span class="float-right">Maximum file size is 2mb</span>
+                                            <div class="file-upload-wrapper" data-text="back.jpg">
+                                                <input type="file" class="file-upload-field" value="" name="upload2">
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-success ps-5 pe-5">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {% endblock %}

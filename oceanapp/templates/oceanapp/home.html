@@ -1,0 +1,658 @@
+﻿<!doctype html>
+<html lang="en">
+    {% load static %}
+    <style>
+      .goog-te-banner-frame {
+          display: none !important;
+      }
+      .goog-te-gadget-simple{
+          display: none !important;
+      }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script></head>
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<head>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/oceans12/image/upload/v1650496305/static1/dashboard/images/favicon_uo4bbd.jpg">
+    
+<title>Ocean Fortunes &mdash; Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://preview.colorlib.com/theme/banker/A.fonts,,_icomoon,,_style.css+css,,_bootstrap.min.css+css,,_jquery-ui.css+css,,_owl.carousel.min.css+css,,_owl.theme.default.min.css+css,,_owl.theme.default.min.css+css,,_jquery.fancybox.min.css+css,,_bootstrap-datepicker.css+fonts,,_flaticon,,_font,,_flaticon.css+css,,_aos.css+css,,_style.css,Mcc.jci9ixff9t.css.pagespeed.cf.ul2248nN4-.css"> -->
+<!-- <link rel="stylesheet" href="https://res.cloudinary.com/oceans12/raw/upload/v1649973693/static/css/style_ltjrnn.css"> -->
+<link rel="stylesheet" href="https://res.cloudinary.com/oceans12/raw/upload/v1650042903/static/css/style_b6cuio.css">
+
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div id="overlayer"></div>
+<div class="loader">
+<div class="spinner-border text-primary" role="status">
+<span class="sr-only">Loading...</span>
+</div>
+</div>
+<div class="site-wrap">
+<div class="site-mobile-menu site-navbar-target">
+<div class="site-mobile-menu-header">
+<div class="site-mobile-menu-close mt-3">
+<span class="icon-close2 js-menu-toggle"></span>
+</div>
+</div>
+<div class="site-mobile-menu-body"></div>
+</div>
+
+
+<!-- <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-6 col-xl-2">
+<h1 class="mb-0 site-logo"><a href="{% url 'm-home' %}" class="h2 mb-0"><img src="https://res.cloudinary.com/oceans12/image/upload/v1649973739/static/images/logo_fc2fsm.png" style="width: 175px;height: 50px;" alt="logo"> </a></h1>
+</div>
+<div class="col-12 col-md-10 d-none d-xl-block">
+<nav class="site-navigation position-relative text-right" role="navigation">
+<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+<li><a href="#home-section" class="nav-link" style="color: #000;">Home</a></li>
+<li >
+<a href="#Company-section" class="nav-link" style="color: #000;">About Us</a>
+
+<li><a href="#contact-section" class="nav-link" style="color: #000;">Contact</a></li>
+<li><a href="{% url 'login' %}"  class="nav-link" style="color: #000;">Login</a></li>
+<li class="social"><a href="https://www.facebook.com/Ocean-Fortunes-109228978425078" class="nav-link"><span><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+</svg></span></a></li>
+<li class="social"><a href="https://twitter.com/ocean_fortunes" class="nav-link"><span><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+</svg></span></a></li>
+<li class="social"><a href="https://www.linkedin.com/mwlite/in/ocean-fortunes-535577237" class="nav-link"><span><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+</svg></span></a></li>
+</nav>
+</div>
+<div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+</div>
+</div>
+</header> -->
+
+
+<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <div class="col-6 col-xl-2">
+          <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">OceanFortunes<span class="text-primary">.</span> </a></h1>
+        </div>
+
+        <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li><a href="#home-section" class="nav-link">Home</a></li>
+              <li class="has-children">
+                <a href="#about-section" class="nav-link">About Us</a>
+                <ul class="dropdown">
+                  
+                  <li><a href="#faq-section" class="nav-link">FAQ</a></li>
+          
+                  <li><a href="#services-section" class="nav-link">Services</a></li>
+                
+                  <!-- <li class="has-children">
+                    <a href="#">More Links</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Menu One</a></li>
+                      <li><a href="#">Menu Two</a></li>
+                      <li><a href="#">Menu Three</a></li>
+                    </ul>
+                  </li> -->
+                </ul>
+              </li>
+              
+              
+              <!-- <li><a href="{% url 'login' %}" class="nav-link">Login</a></li> -->
+              {% if request.user.is_authenticated %}
+                <li><a onclick='location.href="{% url 'home' %}"'>Dashboard</a></li>
+              {% else %}
+                <li><a onclick='location.href="{% url 'login' %}"'>Login</a></li>
+              {% endif %}
+              <li><a href="#contact-section" class="link">Contact</a></li>
+              <li class="social"><a onclick='location.href="https://www.facebook.com/Ocean-Fortunes-109228978425078"' class="nav-link"><span class="icon-facebook"></span></a></li>
+              <li class="social"><a onclick='location.href="https://twitter.com/ocean_fortunes"' class="nav-link"><span class="icon-twitter"></span></a></li>
+              <li class="social"><a onclick='location.href="https://www.linkedin.com/mwlite/in/ocean-fortunes-535577237"' class="nav-link"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </nav>
+        </div>
+
+
+        <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+
+</header>
+<div class="site-blocks-cover " style="background-image:url(https://res.cloudinary.com/oceans12/image/upload/v1649973736/static/images/hero_2_qgsklx.jpg)" data-aos="fade" id="home-section">
+<div class="container">
+<div class="row align-items-center justify-content-center">
+<div class="col-md-10 mt-lg-5 text-center">
+<div class="single-text owl-carousel">
+<div class="slide">
+<h1 class="text-uppercase" data-aos="fade-up">NFT marketplace</h1>
+<p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">An accessible way to own and profit from non-fungible tokens(NFTs) - digital art and assets on the blockchain</p>
+<div data-aos="fade-up" data-aos-delay="100">
+</div>
+</div>
+<div class="slide">
+<h1 class="text-uppercase" data-aos="fade-up">Crypto Staking</h1>
+<p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Be able to own a percentage in our crypto pools allowing you to make considerable gains and yet share the losses</p>
+</div>
+<div class="slide">
+<h1 class="text-uppercase" data-aos="fade-up">Learn Crypto</h1>
+<p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Get tailored resources to learn crypto</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="#next" class="mouse smoothscroll">
+<span class="mouse-icon">
+<span class="mouse-wheel"></span>
+</span>
+</a>
+</div>
+<div class="site-section" id="next">
+<div class="container">
+<div class="row mb-5">
+<div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973726/static/images/earn_otgrvq.png" alt="earn" class="img-fluid w-25 mb-4">
+<h3 class="card-title">Weekly payments</h3>
+<p>We pay out income on your investments to your Oceans Fortunes account on a weekly basis.</p>
+</div>
+<div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973737/static/images/marketplace_kohplw.png" alt="marketplace" class="img-fluid w-25 mb-4">
+<h3 class="card-title">Full automation</h3>
+<p>The selection of assets for strategies according to the classification are fully automated and do not require an investor's participation.</p>
+</div>
+<div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973737/static/images/learn_io67qc.png" alt="fees" class="img-fluid w-25 mb-4">
+<h3 class="card-title">zero fees for transactions</h3>
+<p>Oceans Fortunes is a free platform without any extra or hidden fees. We cover the costs so you can relax and benefit fully from your investments.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973739/static/images/slide-2_eyhsz7.jpg" class="img-fluid" >
+<!-- <video src="{% static 'vid/vid.mp4' %}" type="video/mp4" class="img-fluid"> -->
+
+</figure>
+</div>
+<div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+<div class="mb-4">
+<h3 class="h3 mb-4 text-black">Crypto Amortization</h3>
+<p>Utilising crypto pools, Ocean Fortunes has each portfolio's assets cefully allocated to ensure fair distribution, taking into account risk to reward ratio at its fullest.</p>
+</div>
+<div class="mb-4">
+<ul class="list-unstyled ul-check success">
+<li>Adequate ROI</li>
+<li>Zero transaction fees</li>
+<li>Complete investment transparency</li>
+</ul>
+</div>
+<div class="mb-4">
+
+<div class="form-group d-flex align-items-center">
+
+<a href="{% url 'register' %}"><input type="submit" class="btn btn-primary" value="Get Started"></a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="site-section cta-big-image" id="Company-section">
+<div class="container">
+<div class="row mb-5 justify-content-center">
+<div class="col-md-8 text-center">
+<h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Company</h2>
+<p class="lead" data-aos="fade-up" data-aos-delay="100">Ocean Fortunes is a platform for investing.<br> Through building crypto asset portfolios, Ocean fortunes offers a flexible investment concept that suits even beginning investors.</p>
+</div>
+</div>
+<div class="row">
+<figure class="circle-bg"></figure>
+<div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973738/static/images/session_oja0q8.jpg" alt="investor" class="img-fluid">
+</figure>
+</div>
+<div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+<h3 class="text-black mb-4">How we make money for investors</h3>
+<ol>
+    <li>We buy different undervalued cryptocurrencies and crypto-tokens in large quantities that showcase potential for positive liquidity. </li>
+    <li>We invest in NFTs that prove valuable on both a fiscal level and possess long-term driven meaning e.g a musician's NFT launched album.</li>
+    <li>We try make it a habit to be first in-line on crypto start-ups as well as meta related endeavours that large companies such as Nike or coca-cola have included as part of their stock portfolio.</li>
+</ol>
+</div>
+</div>
+<div>
+    <p>Ocean Fortunes' financial platform operates on the model peer-to-portfolio. It is meant both for beginning investors and for professionals. We have automated the investment process: the investor chooses the strategy, the amount, and the term of the investment.</p>
+    <p>Ocean Fortunes offers a flexible operating model under three investment strategies, with annual profitability ranging from 13.5% to 14,5%</p>
+</div>
+<div>
+    <h2><b>Our Values</b></h2>
+    <div>
+        <div>
+            <h5><b>Transparency</b></h5>
+            <p>Investors and partners are our companions<br>in reaching success. We keep up transparent<br> relations with all market participants</p>
+        </div>
+        
+        <div>
+            <h5><b>Professionalism</b></h5>
+            <p>Our team consists of professionals having long-term <br>experience in financial technology services, <br>so we clearly know what our clients need.</p>
+        </div>
+        <div>
+            <h5><b>Innovation</b></h5>
+            <p>Even though we do not aim for profit at the expense of our investors,<br> we are constantly searching for technological innovations<br> to better manage and growth assets in our portfolio.</p>
+        </div> 
+    </div>
+</div>
+</div>
+</div>
+
+
+<section class="site-section" id="services-section">
+<div class="container">
+<div class="row mb-5 justify-content-center">
+<div class="col-md-7 text-center">
+<h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">How It Works</h2>
+<p class="lead" data-aos="fade-up" data-aos-delay="100">For security our platform has its own implimentation of a payment gateway that allows smooth withdrawals and deposits hassle free.</p>
+</div>
+</div>
+<div class="row align-items-lg-center">
+<div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+<div class="owl-carousel slide-one-item-alt">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973738/static/images/slide-1_cpbl5c.jpg" alt="Image" class="img-fluid">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973739/static/images/slide-2_eyhsz7.jpg" alt="Image" class="img-fluid">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973739/static/images/slide-3_e9hrdv.jpg" alt="Image" class="img-fluid">
+</div>
+<div class="custom-direction">
+<a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a><a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
+</div>
+</div>
+<div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+<div class="owl-carousel slide-one-item-alt-text">
+<div>
+<h2 class="section-title mb-3">01. Visa/Mastercard Deposits</h2>
+<p>Investments can be done with fiat payments using visa or mastercard.</p>
+<p><a href="{% url 'register' %}" class="btn btn-primary mr-2 mb-2">Get Started</a></p>
+</div>
+<div>
+<h2 class="section-title mb-3">02. Crypto Deposits</h2>
+<p>By connecting your wallet, you have free rein to carry out withdrawals and deposits using our platform's payment gateway.</p>
+<p><a href="{% url 'register' %}" class="btn btn-primary mr-2 mb-2">Login</a></p>
+</div>
+<div>
+<h2 class="section-title mb-3">03. Bank Transfers</h2>
+<p>Over secure encryption, investors have free rein over their finances knowing sensitive information is secure.</p>
+<p><a href="{% url 'register' %}" class="btn btn-primary mr-2 mb-2">Get Started</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="site-section border-bottom bg-light" id="services-section">
+<div class="container">
+<div class="row mb-5">
+<div class="col-12 text-center" data-aos="fade">
+<h2 class="section-title mb-3">The Pillars of Ocean Fortunes</h2>
+</div>
+</div>
+<div>
+    <p>Crypto has the capacity to force a redesign of the Internet, our financial system, and money in a way that fosters and protects the rights and dignity of the individual. <br> we are successful, we could make as great of a contribution to personal freedom as the invention of the printing press, the personal computer, and the early, open Internet.
+        <br>Crypto is not just a technology, it's a movement. But it won't happen unless we build simple, elegant, and secure ways for individuals and institutions around the world to discover and interact with this new frontier.
+        
+        We founded Ocean Fortunes with a “security-first” mentality and ethos of asking for permission, not forgiveness.<br> We have worked hard to provide you with a high-integrity choice and we look forward to earning and maintaining your trust.<br>
+        Ocean Fortunes is a Fintech company with one of it's regulators being the New York State Department of Financial Services (NYSDFS). <br>We are subject to capital reserve requirements, cybersecurity requirements, and banking compliance standards set forth by the NYSDFS and the New York Banking Law. Ocean Fortunes is also a fiduciary and Qualified Custodian.</p>
+<div>
+       
+    <p>Safety, security and compliance
+
+        Oceans Fortunes is a licensed New York trust company that undergoes regular bank exams and is subject to the cybersecurity audits conducted by the New York Department of Financial Services.<br> more about our commitment to security.
+        
+        SOC Certifications
+        
+        Oceans Fortunes is SOC 1 Type 2 and SOC 2 Type 2 compliant. We are the world's first cryptocurrency exchange and custodian to complete these exams.
+        
+        Hardware security keys
+        
+        With Oceans Fortunes you can secure your account with a hardware security key via WebAuthn.
+        
+        Insurance coverage
+        
+        All crypto held online in our exchange wallet is insured and we use best-in-industry cold storage coverage with leading insurance providers.
+        
+    </p>
+</div>
+</div>
+<div class="row align-items-stretch">
+<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+<div class="unit-4">
+<div class="unit-4-icon">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973730/static/images/flaticon-svg/svg/block_jyiwii.svg" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+</div>
+<div>
+<h3>Portfolio</h3>
+
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+<div class="unit-4">
+<div class="unit-4-icon">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973732/static/images/flaticon-svg/svg/shield_zzsm1e.svg" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+</div>
+<div>
+<h3>Security</h3>
+
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+<div class="unit-4">
+<div class="unit-4-icon">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973732/static/images/flaticon-svg/svg/paper_rh8vna.svg" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+</div>
+<div>
+<h3>Licensing</h3>
+
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+<div class="unit-4">
+<div class="unit-4-icon">
+<img src="https://res.cloudinary.com/oceans12/image/upload/v1649973732/static/images/flaticon-svg/svg/check-mark_qlgbud.svg" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+</div>
+<div>
+<h3>Compliance</h3>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="site-section bg-light" id="Investments-section">
+<div class="container">
+<div class="row mb-5">
+<div class="col-12 text-center" data-aos="fade-up">
+<h2 class="section-title mb-3">Investments</h2>
+</div>
+</div>
+<div class="row mb-5">
+<div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="">
+<div class="pricing">
+<h3 class="text-center text-black">Classic Strategy</h3>
+<div class="price text-center mb-4 ">
+<span><span>€200</span></span>
+
+</div>
+<ul class="list-unstyled ul-check success mb-5">
+<li>Dividends</li>
+<li>fixed annual interest rate</li>
+<li class="remove">crypto giveaways</li>
+<li class="remove">NPL classification</li>
+</ul>
+<p class="text-center">
+<a href="{% url 'portfolio' %}" class="btn btn-secondary">Get Started</a>
+</p>
+</div>
+</div>
+<div class="col-md-6 mb-4 mb-lg-0 col-lg-4 pricing-popular" data-aos="fade-up" data-aos-delay="100">
+<div class="pricing">
+<h3 class="text-center text-black">Balanced Strategy</h3>
+<div class="price text-center mb-4 ">
+ <span><span>€350</span></span>
+</div>
+<ul class="list-unstyled ul-check success mb-5">
+<li>Dividends</li>
+<li>crypto giveaways</li>
+<li>NPL classification</li>
+<li>fixed annual interest rate</li>
+<li class="remove">NFT whitelist</li>
+</ul>
+<p class="text-center">
+<a href="{% url 'portfolio' %}" class="btn btn-primary">Get Started</a>
+</p>
+</div>
+</div>
+<div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+<div class="pricing">
+<h3 class="text-center text-black">Special Strategy</h3>
+<div class="price text-center mb-4 ">
+    <span><span>€500</span></span>
+</div>
+<ul class="list-unstyled ul-check success mb-5">
+    <li>Dividends</li>
+    <li>crypto giveaways</li>
+    <li>NPL classification</li>
+    <li>fixed annual interest rate</li>
+    <li>NFT whitelist</li>
+</ul>
+<p class="text-center">
+<a href="{% url 'portfolio' %}" class="btn btn-secondary">Get Started</a>
+</p>
+</div>
+</div>
+</div>
+<div class="row site-section" id="faq-section">
+<div class="col-12 text-center" data-aos="fade">
+<h2 class="section-title">Frequently Ask Questions</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+<h3 class="text-black h4 mb-4">What is Ocean Fortunes?</h3>
+<p>Ocean Fortunes is not a market place, it is a platform for investing, issued by the companies joint under Fintech Finance. Ocean Fortunes is included in ITSF holding. The platform offers a flexible investment concept that suits even beginning investors.</p>
+</div>
+<div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+<h3 class="text-black h4 mb-4">How to top up balance?</h3>
+<p>After completing the registration process, there are two ways you can top up your Ocean Fortunes account: using your personal debit/credit card or via our crypto payment gateway from your wallet. The minimum top-up amount is €10.</p>
+</div>
+<div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+<h3 class="text-black h4 mb-4">How to invest?</h3>
+<p>Sign up, verify your identity and deposit money into your Ocean Fortunes account. After you top up the account, choose an investment strategy according to your income and risk expectations, create an investment portfolio under the required parameters. Here you go — you have become our investor!</p>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+<h3 class="text-black h4 mb-4">Who can become an investor?</h3>
+<p>Any individual or legal person with a crypto wallet can become an Ocean Fortunes investor. Each case will be considered individually. If you are interested in Ocean Fortunes or have more questions about us, please, send your request at support@oceanfortunes.com</p>
+</div>
+<div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+<h3 class="text-black h4 mb-4">How is an investment interest calculated?</h3>
+<p>The interest is accrued on a daily basis. The income on your investment portfolio is deposited to your Ocean Fortunes account every week, and the investment amount is automatically reinvested before the portfolio expires. You can independently invest the income in new portfolios or transfer it to your wallet.</p>
+</div>
+<div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+    <h3 class="text-black h4 mb-4">How to withdraw funds?</h3>
+    <p>At the end of the investment period or if you want to withdraw your funds prior, we allow you to do this, using your linked wallet or a credit/debit card, i.e. only that account from which the initial investment was deposited. If for any reason you need to withdraw your money to a different wallet from the original one, you will have to verify them first. The minimum withdrawal amount is €50.</p>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="site-section bg-light" id="contact-section" data-aos="fade">
+<div class="container">
+<div class="row mb-5">
+<div class="col-12 text-center">
+<h2 class="section-title mb-3">Contact Us</h2>
+</div>
+</div>
+<div class="row mb-5">
+<!-- <div class="col-md-4 text-center">
+<p class="mb-4">
+<span class="icon-room d-block h2 text-primary"></span>
+<span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+</p>
+</div> -->
+<!-- <div class="col-md-4 text-center">
+<p class="mb-4">
+<span class="icon-phone d-block h2 text-primary"></span>
+<a href="#">+1 232 3235 324</a>
+</p>
+</div> -->
+<div class="col-md-4 text-center">
+<p class="mb-0">
+<span class="icon-mail_outline d-block h2 text-primary"></span>
+<a href="mailto:info@oceanfortunes.com"><span >info@oceanfortunes.com</span></a>
+</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 mb-5" id="form">
+<form action="#form" method="POST" class="p-5 bg-white">
+    {% csrf_token %}
+    <h2 class="h4 text-black mb-5">Contact Form</h2>
+    {% if messages %}
+        {% for message in messages %}
+            <h2 class="section-title mb-3">{{message}}</h2>
+        {% endfor %}
+    {% endif %}
+    <div class="row form-group">
+    <div class="col-md-6 mb-3 mb-md-0">
+    <label class="text-black" for="fname">First Name</label>
+    <input type="text" id="fname" class="form-control" name="fname">
+    </div>
+    <div class="col-md-6">
+    <label class="text-black" for="lname">Last Name</label>
+    <input type="text" id="lname" class="form-control" name="lname">
+    </div>
+    </div>
+    <div class="row form-group">
+    <div class="col-md-12">
+    <label class="text-black" for="email">Email</label>
+    <input type="email" id="email" class="form-control" name="email">
+    </div>
+    </div>
+    <div class="row form-group">
+    <div class="col-md-12">
+    <label class="text-black" for="subject">Subject</label>
+    <input type="subject" id="subject" class="form-control" name="subject">
+    </div>
+    </div>
+    <div class="row form-group">
+    <div class="col-md-12">
+    <label class="text-black" for="message">Message</label>
+    <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+    </div>
+    </div>
+    <div class="row form-group">
+    <div class="col-md-12">
+    <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+    </div>
+    </div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="container">
+<div class="row">
+<div class="col-md-9">
+<div class="row">
+<div class="col-md-5">
+<h2 class="footer-heading mb-4">Company</h2>
+</div>
+<div class="col-md-3 ml-auto">
+<h2 class="footer-heading mb-4">Quick Links</h2>
+<ul class="list-unstyled">
+<li><a href="#Company-section" class="smoothscroll">About Us</a></li>
+<li><a href="#services-section" class="smoothscroll">Services</a></li>
+<li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-md-3 footer-social">
+<h2 class="footer-heading mb-4">Follow Us</h2>
+<a href="https://www.facebook.com/Ocean-Fortunes-109228978425078" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+<a href="https://twitter.com/ocean_fortunes" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+<a href="https://www.instagram.com/ocean_fortunes/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+<a href="https://www.linkedin.com/mwlite/in/ocean-fortunes-535577237" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+<form action="#" method="post" class="footer-subscribe">
+<div class="input-group mb-3">
+<input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+<div class="input-group-append">
+<button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="row pt-5 mt-5 text-center">
+<div class="col-md-12">
+<div class="border-top pt-5">
+<p class="copyright"><small>
+
+Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min-5.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Ocean Fortunes <i class="icon-heart text-danger" aria-hidden="true"></i></a>
+</small></p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div> 
+<script src="https://res.cloudinary.com/oceans12/raw/upload/v1649973746/static/js/jquery-3.3.1.min_vn90u7.js"></script>
+<script src="https://res.cloudinary.com/oceans12/raw/upload/v1649973748/static/js/jquery-ui.js_popper.min.js.pagespeed.jc.HMwuexF_M-_uupy71.js"></script><script>eval(mod_pagespeed_CXifWJ99V1);</script>
+<script>eval(mod_pagespeed_n1PcjVhRV3);</script>
+<script src="https://res.cloudinary.com/oceans12/raw/upload/v1649973744/static/js/bootstrap.min_o75zab.js"></script>
+<script src="https://res.cloudinary.com/oceans12/raw/upload/v1649973746/static/js/owl.carousel.min.js_jquery.countdown.min.js_jquery.easing.1.3.js_aos.js.pagespeed.jc.9GhdY2fWbE_jfwzxb.js"></script><script>eval(mod_pagespeed_3CP7DCa5eU);</script>
+<script>eval(mod_pagespeed_pPQye3OwK5);</script>
+<script>eval(mod_pagespeed_y5NrYtBNvx);</script>
+<script>eval(mod_pagespeed_r4p0HiIG0P);</script>
+<script src="https://res.cloudinary.com/oceans12/raw/upload/v1649973746/static/js/jquery.fancybox.min.js_jquery.sticky.js.pagespeed.jc.5lVFNgl3k8_m523z2.js"></script><script>eval(mod_pagespeed_cjMkG5doX$);</script>
+<script>eval(mod_pagespeed_Nv_hh06p9Q);</script>
+<script src="https://res.cloudinary.com/oceans12/raw/upload/v1649973744/static/js/isotope.pkgd.min.js_main.js.pagespeed.jc.K8NLnjcsvu_klhl4o.js"></script><script>eval(mod_pagespeed_yMq1SKFb5J);</script>
+<script>eval(mod_pagespeed_t_skve8vY$);</script>
+
+<!-- <script async="" src="../../gtag/js-5.js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script> -->
+<script defer="" src="../../beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194-5" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6f9b65815dcd7803","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
+</body>
+<script>
+
+  function hc(dc){
+              lang = Cookies.get('language');
+              if(lang != dc){
+                  window.location.hash = 'googtrans(en|' + dc + ')';
+                  location.reload();
+                  Cookies.set('language', dc);
+              }
+          }
+          $.ajax({
+              type: "GET",
+              url: "https://geolocation-db.com/jsonp/",
+              jsonpCallback: "callback",
+              dataType: "jsonp",
+              success: function( location ) {
+                  $('#country').html(location.country_code);
+                  co = location.country_code;
+                  co = co.toLowerCase();
+                  hc(co); // Replace here
+              }
+          });
+          function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, '#card-row');
+          }
+      </script>
+      <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</html>

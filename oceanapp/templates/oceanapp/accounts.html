@@ -1,0 +1,253 @@
+﻿{% extends "oceanapp/dbase.html" %} {% block title %}Dashboard{% endblock %} {% block body %}
+{% load static %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.statically.io/gh/zenorocha/clipboard.js/v2.0.10/dist/clipboard.min.js"></script>
+        <div class="content-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="card profile_card">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    {% if prof.file %}
+                                    <img class="me-3 rounded-circle me-0 me-sm-3" src="{{prof.file.url}}" width="60" height="60" alt="">
+                                    {% else %}
+                                    <img class="me-3 rounded-circle me-0 me-sm-3" src="https://res.cloudinary.com/oceans12/image/upload/v1650496310/static1/images/avatar_amckxn.png" width="60" height="60" alt="">
+                                    {% endif %}
+                                    <div class="flex-grow-1">
+                                        <span>Hello</span>
+                                        <h4 class="mb-2">{{request.user}}</h4>
+                                        <!-- <p class="mb-1"> <span><i class="fa fa-phone me-2 text-primary"></i></span> +1
+                                            235 5547</p> -->
+                                        <p class="mb-1"> <span><i class="mdi mdi-email"></i></span>
+                                            <a>{{request.user.email}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="card-profile__info">
+                                    <!-- <li>
+                                        <h5 class="me-4">Email Address</h5>
+                                        <span class="text-muted">{{request.user.email}}</span>
+                                    </li> -->
+                                    <li class="mb-1">
+                                        <h5 class="me-4">AML/KYC</h5>
+                                        {% if verify != True %}
+                                            <span>Not-Verified</span>
+                                        {% else %}
+                                            <span>Verified</span>
+                                        {% endif %}
+                                    </li>
+                                    
+                                    <li>
+                                        <h5 >Registered On:</h5>
+                                        <span >{{request.user.date_joined}}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <h5>Email Confirmed:</h5>
+                                        {% if email != True %}
+                                        <span >Not-Verified
+                                        </span>
+                                        {% else %}
+                                        <span >Verified
+                                        </span>
+                                        {% endif %}
+                                    </li>
+                                    <li>
+                                        <h5 class="text-danger me-4">Last Log:</h5>
+                                        <span class="text-danger">{{log}}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <h5>Referral Credits:</h5>
+                                        <span>€{{credit}}</span>
+                                    </li>
+                                    <li>
+                                        <h5>Refer a Friend: </h5>
+                                        <textarea id="textId" hidden>https://oceanfortunes.com/refer/{{request.user}}</textarea>
+                                        <span>Refer a friend to stand a chance to win NFTs worth $3000 and more credits using this link: <span style="color: #7f0abb;">https://oceanfortunes.com/refer/{{request.user}}</span> 
+                                        </span>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Early Withdraw</h4>
+                            </div>
+                            {% if messages %}
+                            <div class="card-header">
+                                
+                                    {% for message in messages %}
+                                        <h4 class="card-title" style="color: #7f0abb;">{{message}}</h4>
+                                    {% endfor %}
+                                
+                            </div>
+                            {% endif %}
+                            <div class="card-body">
+                                <form action="">
+                                    <!-- <div class="mb-3">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text"><i class="fa fa-money"></i></label>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="5000 EUR">
+                                        </div>
+                                    </div> -->
+                                    <div class="mb-3">
+                                        <div class="input-group mb-3">
+                                            <!-- <div class="input-group-prepend">
+                                                <label class="input-group-text"><i class="fa fa-bank"></i></label>
+                                            </div> -->
+                                            <!-- <select class="form-control">
+                                                <option>Accured income: €{{acc.value}}</option>
+                                                <option>Referral Credit: {{credit}}</option>
+                                                <option>Principle: €{{pri.principal}} | You will be charged 15% for an early principle withdrawal</option>
+                                            </select> -->
+                                        </div>
+                                    </div>
+
+                                    <a href="{% url 'wp' %}" class="btn btn-primary w-100" style="height: 50px;"><i class="fa fa-bank"></i> Withdraw Principle</a><br><br>
+                                    
+                                    {% if credit > 0 %}
+                                    <a href="{% url 'wrc' %}" class="btn btn-primary w-100" style="height: 50px;"><i class="fa fa-bank"></i> Withdraw Referral Credit: €{{credit}}</a>
+                                    {% endif %}
+
+                                    {% if acc.value != '0' %}
+                                    <br><br><a href="{% url 'wai' %}" class="btn btn-primary w-100" style="height: 50px;"><i class="fa fa-bank"></i> Withdraw profit: €{{acc.value}}</a>
+                                    {% endif %}
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header border-0">
+                                <h4 class="card-title">History</h4>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="transaction-table">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0 table-responsive-sm">
+                                            <tbody>
+                                                {% for i in history %}
+                                                <tr>
+
+                                                    <td>
+                                                        {% if i.buy_sold != True %}
+                                                            <span class="badge bg-danger">Sold</span>
+                                                        {% else %}
+                                                            <span class="badge bg-success">Buy</span>
+                                                        {% endif %}
+                                                    </td>
+                                                    <td>
+                                                        {% if i.status != True %}
+                                                            <i class="cc BTC"></i> Pending
+                                                        {% else %}
+                                                            <i class="cc BTC"></i> Completed
+                                                        {% endif %}
+                                                    </td>
+                                                    <td>
+                                                        {{i.date}}
+                                                    </td>
+                                                    <td class="text-danger">{{i.amount }} EUR</td>
+                                                
+                                                </tr>
+                                                {% endfor %}
+                                                <!-- <tr>
+                                                    
+                                                    <td>
+                                                        <span class="badge bg-success">Buy</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc LTC"></i> LTC
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******8475
+                                                    </td>
+                                                    <td class="text-success">-0.000242 USD</td>
+                                                    
+                                                </tr> -->
+                                                <!-- <tr>
+                                                    
+                                                    <td>
+                                                        <span class="badge bg-danger">Sold</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc XRP"></i> XRP
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******8475
+                                                    </td>
+                                                    <td class="text-danger">-0.000242 USD</td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                   
+                                                    <td>
+                                                        <span class="badge bg-success">Buy</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc DASH"></i> DASH
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******2321
+                                                    </td>
+                                                    <td class="text-success">-0.000242 USD</td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    
+                                                    <td>
+                                                        <span class="badge bg-danger">Sold</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc BTC"></i> BTC
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******2321
+                                                    </td>
+                                                    <td class="text-danger">-0.000242 USD</td>
+                                                
+                                                </tr> -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script>
+        document.getElementById("copyBtn")
+          .onclick = function() {
+            let text = document.getElementById("textId").value;
+            navigator.clipboard.writeText(text)
+              .then(() => {
+                alert('Text copied to clipboard');
+              })
+              .catch(err => {
+                alert('Error in copying text: ', err);
+              });
+          }
+      </script>
+    {% endblock %}
+   
+    
+
+    

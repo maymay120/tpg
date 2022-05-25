@@ -1,0 +1,36 @@
+﻿{% extends "oceanapp/dbase.html" %} {% block title %}Dashboard{% endblock %} {% block body %}
+
+        <div class="content-body">
+            <div class="verification section-padding">
+                <div class="container h-100">
+                    <div class="row justify-content-center h-100 align-items-center">
+                        <div class="col-xl-5 col-md-6">
+                            <div class="auth-form card">
+                                <div class="card-body">
+                                    
+                                        <div class="identity-content">
+                                            <!-- <span class="icon"><i class="fa fa-shield"></i></span> -->
+                                            <span class="icon"><i class="fa fa-shield"></i></span>
+                                            <h4>Please verify your identity to activate all features of our platform.</h4>
+                                            <p>Uploading your ID helps us ensure the safety and security of your funds, and adhere to AML/KYC policies.
+                                            </p>
+                                        </div>
+
+                                        <!-- <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+                                        <input class="form-control" type="file" id="formFileDisabled" name="upload" /> -->
+                                        <br>
+                                        <center><div class="col-12">
+                                            <a href="{% url 'verify1' %}"><button class="btn btn-success">Start Verification Process</button></a>
+                                        </div></center>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {% endblock %}
