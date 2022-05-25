@@ -183,6 +183,7 @@ def home(request):
 
 def email_veri(request, username):
     if request.method == 'POST':
+        print(username)
         user = User.objects.get(username=username)
         update_profile = profile.objects.get(user=user)
         update_profile.email_verify = True
@@ -300,6 +301,13 @@ def Register2(request, user):
         email = request.POST.get('email')
         pass1 = request.POST.get('pass1')
         phone = request.POST.get('phone')
+
+        try:
+            name.split()[1]
+            
+        except:
+            messages.error(request, 'Enter your first and last names')
+            return render(request, 'oceanapp/reg.html', {})
 
         check = User.objects.filter(username=username)
         check_email = User.objects.filter(email=email)

@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-(w3an%=5#2wbkhrolxuhpqu^ad6dh&4@ekcf381518qj-$fv-w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['http://185.156.172.76', 'https://oceanfortunes.com','http://www.oceanfortunes.com', 'http://localhost', 'https://www.oceanfortunes.com', 'https://oceanfortunes.com', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
+#ALLOWED_HOSTS = ['http://185.156.172.76', 'https://oceanfortunes.com','http://www.oceanfortunes.com', 'http://localhost', 'https://www.oceanfortunes.com', 'https://oceanfortunes.com', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['http://185.156.172.76','https://oceanfortunes.com','https://www.oceanfortunes.com']
 
 CORS_ORIGIN_ALLOW_ALL = True
