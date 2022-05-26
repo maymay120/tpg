@@ -11,6 +11,9 @@
       .goog-gt-tt{
         display: none !important; 
       }
+      .skiptranslate{
+        display: none !important; 
+      }
   </style>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script></head>
       <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
@@ -659,6 +662,8 @@ Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728
           function googleTranslateElementInit() {
               new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, '#card-row');
           }
+           // Force hiding of "original text" popup for menus, etc. (very annoying)
+           
       </script>
       <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </html>
