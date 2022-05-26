@@ -599,6 +599,13 @@ def setting(request):
             new_prof.save()
 
         if name:
+            try:
+                name.split()[1]
+            
+            except:
+                messages.error(request, 'Enter your first and last names')
+                return redirect('setting')
+                
             split_name = name.split()
             first = split_name[0]
             second = split_name[1]
@@ -637,11 +644,11 @@ def setting(request):
             new_data = profile.objects.get(user=request.user)
             new_data.country = country
             new_data.save()
-        if file:
-            #file
-            new_data = profile.objects.get(user=request.user)
-            new_data.file = file
-            new_data.save()
+        # if file:
+        #     #file
+        #     new_data = profile.objects.get(user=request.user)
+        #     new_data.file = file
+        #     new_data.save()
 
         messages.success(request, f'Profile Successfully Updated')
         return redirect('setting')
